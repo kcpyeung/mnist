@@ -46,7 +46,7 @@ print(paste("finished prediction at", Sys.time()))
 
 df <- df[df$predicted != df$labels, ]
 bad <- df[, c("predicted", "labels")]
-print(bad)
+print(bad[1:25, ])
 print(table(correct))
 print(paste("accuracy: ", length(correct[correct]) / length(correct) * 100, "%"))
 df$predicted <- NULL
